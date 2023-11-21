@@ -10,6 +10,23 @@ public class Joueur {
     Long id_joueur;
     String Nom;
 
+    String Poste;
+
+    public String getPoste() {
+        return Poste;
+    }
+
+    public void setPoste(String poste) {
+        Poste = poste;
+    }
+
+    public Joueur(Long id_joueur, String nom, String poste, Equipe equipe) {
+        this.id_joueur = id_joueur;
+        Nom = nom;
+        Poste = poste;
+        this.equipe = equipe;
+    }
+
     @ManyToOne
     @JoinColumn(name = "id_equipe")
     Equipe equipe;
